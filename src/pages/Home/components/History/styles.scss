@@ -1,0 +1,54 @@
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.history {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  left: 50%;
+  color: $text;
+
+  @include for-tablet-portrait-up {
+    width: unset;
+    margin-left: 0;
+    left: 0;
+    position: initial;
+  }
+}
+
+.history-header {
+  margin-left: 20px;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 26px;
+
+  @include for-tablet-landscape-up {
+    margin-left: 0px;
+    margin-bottom: 54px;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.history-list {
+  max-height: 400px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+
+  @media (max-width: 700px) {
+    .rounded-corners {
+      border-radius: 0;
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    padding-right: 22px;
+    max-height: calc(100vh - 254px);
+  }
+}

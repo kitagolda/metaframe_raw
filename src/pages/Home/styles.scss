@@ -1,0 +1,31 @@
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.wrapper {
+  padding-top: 40px;
+  min-height: 100vh;
+  background-image: url("~assets/images/background.png");
+  background-size: cover;
+  background-color: black;
+  background-position: top;
+
+  @include for-tablet-landscape-up {
+    padding-top: 48px;
+  }
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 32px;
+
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    margin-top: 65px;
+  }
+
+  @include for-tablet-landscape-up {
+    gap: 72px;
+  }
+}

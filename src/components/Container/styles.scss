@@ -1,0 +1,15 @@
+@import "styles/mixins.scss";
+
+.container {
+  padding: 0 20px;
+
+  @include for-tablet-landscape-up {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @include for-desktop-up {
+    max-width: 1000px;
+  }
+}

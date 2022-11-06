@@ -1,0 +1,55 @@
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(
+      124.59deg,
+      rgba(255, 255, 255, 0.04) 14.27%,
+      rgba(255, 255, 255, 0) 139.76%
+    );
+    backdrop-filter: blur(7.5px);
+  }
+
+  @include for-tablet-landscape-up {
+    width: 371px;
+    padding: 16px 24px;
+  }
+}
+
+.item-date-time {
+  font-family: "IBM Plex Mono";
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 21px;
+
+  @include for-tablet-landscape-up {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.item-theft-probability {
+  line-height: 136%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+
+  @include for-tablet-landscape-up {
+    font-size: 14px;
+  }
+}
+
+.selected-card {
+  &,
+  &:hover {
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.23);
+  }
+}
